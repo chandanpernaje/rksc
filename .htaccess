@@ -1,0 +1,6 @@
+# Route all traffic through the Node.js Passenger app
+PassengerAppRoot "${DOCUMENT_ROOT}/../rksconsulting"
+PassengerAppType node
+PassengerStartupFile app.js
+PassengerNodejs /usr/bin/node
+

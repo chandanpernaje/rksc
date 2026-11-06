@@ -1,0 +1,8 @@
+{
+  "name": "Sharat Kaul | Semiconductor Strategy & Advanced Packaging",
+  "description": "Sharat Kaul — semiconductor technology leader focused on advanced packaging, OSAT, chiplets, semiconductor strategy and ecosystem development.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

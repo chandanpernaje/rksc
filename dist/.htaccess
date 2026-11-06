@@ -1,0 +1,22 @@
+# cPanel / Apache Configuration for RKS Consulting
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+
+  # 1. API Route: forward /api/contact to /api/contact.php
+  RewriteRule ^api/contact/?$ api/contact.php [L,QSA]
+
+  # 2. Existing files and directories: serve directly
+  RewriteCond %{REQUEST_FILENAME} -f [OR]
+  RewriteCond %{REQUEST_FILENAME} -d
+  RewriteRule ^ - [L]
+
+  # 3. SPA Route Fallback: forward all other requests to index.html
+  RewriteRule ^ index.html [L]
+</IfModule>
+
+# Security: prevent directory listing
+Options -Indexes
+
+# UTF-8 Encoding default
+AddDefaultCharset UTF-8
